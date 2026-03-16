@@ -13,7 +13,7 @@ Para este módulo hubo que formar equipos de 3 personas para la primera solemne.
 
 ***
 
-## Introducción
+## Github
 
 Como primera parte comenzamos a ver alguns detalles de Github.
 Cómo poner estos íconos para poner otros lenguajes dentro del markdown "``` nombre del lenguaje"
@@ -31,11 +31,13 @@ flowchart TD
 
 ```
 
+A la par se nos compartió una web para aprender a escribir en [markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Y se nos compartió otra [herramienta](https://pandoc.org) para poder ir exportando estos archivos como pdf u otros.
+
 ***
 
-## Título 1
+## Arduino IDE
 
-Bla Bla
+Se nos informó que posiblemente este sería el último curso en el que se enseñaría esta tecnología, puesto que el proyecto fue comprado por una empresa y sus políticas fueron cambiadas. Se nos informó sobre una organización llamada ["OSHWA"](https://oshwa.org) en la que se centra en certificar proyectos Open source de tipo Hardware.
 
 ***
 

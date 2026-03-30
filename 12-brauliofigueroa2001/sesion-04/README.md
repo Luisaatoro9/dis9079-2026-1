@@ -82,6 +82,8 @@ corrección del error
 
 - parece que no funcionó, nadie pudo encender el led desde su pc, solo mateo pero al parecer la idea era que todos pudiéramos
 
+-  pra la solemne 1 cada arduino haga cosas a distancia a una raspi y esa raspi a computador, eso ya es extremo, es suficiente, las cosas son difíciles
+
   
 
   

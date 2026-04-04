@@ -38,6 +38,8 @@ lunes 23 de marzo de 2026
 
 vscode
 
+![vscode](./imagenes/instalacionvisualstudio.JPG)
+
 - build estará cambiando constantemente
 
 - .gitignore
@@ -56,6 +58,10 @@ vscode
 
 - el ejemplo que haremos de prender el led es como el blink de arduino pero más cuma
 
+![raspberry](./imagenes/menuraspberry.JPG)
+
+![ejemplo](./imagenes/creandoejemplorasp.JPG)
+
 ### break
 
 - me perdi un poco los 15 min iniciales porque estaba afuera
@@ -71,5 +77,7 @@ vscode
 - existe una carpeta con un password
 
 - linea 69 pixel9, linea 70 mateo123, comentar linea uqe incluye arduinosecrets.h, reemplazar lineas con mi grupo08
+
+- al final de todo no nos pudimos conectar, este fue el error: 
 
 PENDIENTE SUBIR PANTALLAZOS DE LA INSTALACIÓN DE VSCODE Y DE LAS LIBRERÍAS DE RASPI, TAMBIÉN FOTOS DE RASPI

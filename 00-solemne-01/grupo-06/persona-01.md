@@ -14,29 +14,29 @@ Lo primero que hice fue entrar a la página de Adafruit io https://io.adafruit.c
 
 ## Sección de guía de descarga de Adafruit IO
 
-![titulo](quickguidesarevalourra.png)
+![titulo](./imagenes/quickguidesarevalourra.png)
 
 
 ## Despliegue de guías - Selección de "Primeros pasos con Arduino" o "Getting Started With Arduino" en idioma original
 
-![titulo](menuguiasarevalourra.png)
+![titulo](./imagenes/menuguiasarevalourra.png)
 
 
 ## Primera Descarga - Adafruit MQTT
 
-![titulo](instalaciónadafruitmqtt.png)
+![titulo](./imagenes/instalaciónadafruitmqtt.png)
 
 Saqué el pantallazo antes de que se descargara por completo pero si se instaló exitosamente! 
 
 
 ## Segunda Descarga - ArduinoHttpClient
 
-![titulo](instalaciónarduinohttpclient.png)
+![titulo](./imagenes/instalaciónarduinohttpclient.png)
 
 
 ## Tercera Descarga - Adafruit IO Arduino
 
-![titulo](instalaciónadafruitioarduino.png)
+![titulo](./imagenes/instalaciónadafruitioarduino.png)
 
 
 En general me llamó la atención que las descargas fueran tan rápidas, pensé que tendría que dejar el computador por horas!!, no tuve dificultades durente los procesos de descarga, sólo al inicio, como comenté anteriormente, me intriga saber cómo funcionan estos sistemas, personalmente todo esto es nuevo para mí, considero un desafío personal el haber tomado este ramo, espero poder aprender mucho sobre ésta area a lo largo del semestre!!

@@ -11,3 +11,11 @@ investigaciones individuales
 + Con su interfaz fácil de usar y su extensa documentación, Adafruit IO es la forma más sencilla de transmitir, registrar e interactuar con sus datos.
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
+
+## Studio Drift 
+
+studio drift fue fundado en 2007 en ámsterdam por lonneke gordijin y ralph nauta, el estudio nacio desde una obsesión compartida por estos dos, la relación entre humanos, naturaleza y tecnología.
+
++ se conocieron en la academia de diseño de Eindhoven, mientras el mundo del diseño se enfocaba en muebles funcionales, ellos querían crear objetos que de cierta manera reaccionaran.
++ el nombre Drift refleja su intención de dejarse llevar por los procesos naturales. dicen que la tecnología ha avanzado tanto que ya no debería ser algo que usamos, sino algo con lo que coexistimos
++ empezaron con piezas pequeñas como Fragile Future (luces con dientes de leon reales), pero su ambición los llevó a querer intervenir el espacio público a escala masiva, lo que dio paso a sus proyectos de enjambres de drones 

@@ -14,6 +14,9 @@
 
 ### código para enviar
 <img width="1900" height="940" alt="Captura de pantalla 2026-04-06 160014" src="https://github.com/user-attachments/assets/a316168d-0b0f-4ed2-9a27-c916991a1805" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/5ee5e857-3a3e-42a0-8ace-0b8725b25f91" />
+
+
 nos estuvo saliendo solo puntitos durante toda la clase, tratamos con 3 internnet diferentes y usuario de adafruit 
 
 

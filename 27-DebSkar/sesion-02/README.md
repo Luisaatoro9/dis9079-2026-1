@@ -12,7 +12,7 @@ Hoy nos hicimos cuentas en Github, y nos enseñaron a usarlo. Tuvimos que hacer 
   * Visual Eclipse
   * Mosquitto
 
-* #es Incluye
+* #es Include
 * ;es Dentro de
 
 ## Broker 

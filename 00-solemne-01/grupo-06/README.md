@@ -30,11 +30,19 @@ Luego, si presionábamos en el feed de ``brillo-led``, nos permitía ver un grá
 
 ## Sistema Recibir
 
-![Raspberry con LED](./imagenes/armadosistemarecibir.jpeg)
+Como nuestra idea era poder controlar el brillo del LED de una placa a otra, decidimos que en la Raspberry iría el LED ya que en ya habíamos logrado conectar el potenciómetro al Arduino. Como no sabíamos como hacer conexiones con ésta placa y no entendímos los textos que habían en ella, tuvimos que buscar imagenes de referencia para poder reconocer los Pins de la placa y para qué sirve cada una, por lo que encontramos ésta imagen:
 
 ![Pins Raspberry Pi Pico 2 W](./imagenes/Raspberry-Pi-Pico-2-W-Pinout.webp)
 
+Luego de tratar de entender cómo leer los pins y qué hace cada uno, ubicamos una resistencia de 220 y un LED rojo a nuestra protoboard junto a la placa Raspberry Pi Pico 2 W, lo cual terminó viendose así:
+
+![Raspberry con LED](./imagenes/armadosistemarecibir.jpeg)
+
+Cuando íbamos a correr el código en Arduino IDE nos dimos cuenta que para poder trabajar con una Raspberry Pi hay que instalar bibliotecas extra, por lo que instalamos la extensión de Raspberry Pi Boards.
+
 ![Instalando bibliotecas para la placa Raspberry Pi Pico 2 W en Arduino IDE](./imagenes/instalación-raspberrypiboards.jpeg)
+
+Cuando por fin subimos el código, nos salió un error en donde se menciona un puerto serial y por lo que buscamos en internet esto suele pasar bastante con las placas Raspberry Pi, pero a pesar de eso seguimos intentando, y cuando nos dimos cuenta de que ya llevábamos horas en eso decidimos buscar ayuda en el Laboratorio de Interacción Digital (LID).
 
 ![Error de puerto en Raspberry Pi Pico 2 W](./imagenes/error-arduinoide.jpeg)
 

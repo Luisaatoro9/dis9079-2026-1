@@ -20,6 +20,8 @@ Luego de conectar el potenciómetro al Arduino, así se veía nuestra protoboard
 
 ![Arduino con potenciómetro](./imagenes/armadosistemaenviar.jpeg)
 
+Como ya teníamos la placa y el potenciómetro listos, solo nos faltaba lograr enviar la información del movimiento del potenciómetro al Adafruit IO, por lo que fuimos a Feeds y creamos un feed llamado ``brillo-led`` ya que en ese momento estabamos pensando en hacer que el movimiento del potenciómetro afecte el brillo de un LED. Luego de crear el feed, fuimos a crear una nueva Dashboard en donde presionamos en Add Block y generamos un block de ``Gauge``, el cual va de 0 a 100. A éste block le asignamos el feed ``brillo-led`` y cuando subimos el código en Arduino IDE logramos ver como éste se conectaba a Adafruit IO y nos mostraba el cambio de valor al mover el potenciómetro que estaba conectado a la placa Arduino.
+
 ![Adafruit respondiendo a potenciómetro](./imagenes/primerapruebapotenciometro.gif)
 
 ![Gráfico de información que recibió Adafruit](./imagenes/pruebabrilloledadafruitio.png)

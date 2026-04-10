@@ -7,6 +7,17 @@
 * Angel Sabogal
 
 ## descripción del proyecto
+Empezamos el proyecto explorando la biblioteca de aprendizaje de adafruit IO, encontramos un tutorial en [Adafruit IO](https://learn.adafruit.com/adafruit-io-basics-color) explicando la posibilidad de enviarle una señal desde adafruit al arduino de forma que se puede lograr cambiar los colores RGB de  manera remota sin cables y hasta desde otro dispositivo electronico.
+
+Dicho esto, unimos las conexiones del rgb al protoboard y del protoboard al arduino: Lo primero seria conectar las 4 patas del LED RGB al protoboard, despues poner 3 resistencia 560 ohms, estas deben de estar asi:
+* **R** - La luz roja o luz red es la de izquierda inicial, esta tiene que ir acompañada de una resistencia 560 ohms conectada a R y a su vez conectada al pin 4 del arduino.
+* **GND** - La segunda pata (asumiendo la izquierda R) es la de a tierra, debe de ir conectado directo al arduino en el pin 3V.
+* **G** - La luz verde o luz green es la siguiente despues de la GND, esta tiene que ir con una resistencia 560 ohms y a su vez conectada al pin 5 del arduino.
+* **B** - La luz azul o luz blue es la siguiente despues de la G, esta tiene que ir con una resistencia 560ohms y a su vez conectada al pin 2 del arduino.
+
+Debe de quedar asi:
+![LED conectado a arduino](./imagenes/circuitoled.jpg)
+
 
 ## materiales usados en solemne-01
 

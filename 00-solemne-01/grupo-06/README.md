@@ -79,15 +79,7 @@ Cuando por fin subimos el código, nos salió un error en donde se menciona un p
 
 ![Error de puerto en Raspberry Pi Pico 2 W](./imagenes/error-arduinoide.jpeg)
 
-## Sistema Recibir - Proyecto Final
-
-
-
-![Arduino recibiendo información 0-1 de Adafruit IO](./imagenes/arduino-recibiendo-info.jpeg)
-
----
-
-## Aarón nos ayuda en el LID
+### Aarón nos ayuda en el LID
 
 Como no logramos solucionar el error del puerto, fuimos al LID a ver si alguien nos podía ayudar y nos encontramos a Aarón, por lo que le pedimos revisar cuál era el problema. Cuando le explicamos el problema, pidió ver primero el código que envía ya que eso era lo primero que teníamos que hacer funcionar, por lo que le mostramos lo que teníamos en Arduino IDE y nos corrigió el Key de Adafruit IO para que se pueda conectar bien, y aparte cambió el nombre del Feed a algo más formal que en este caso fue ``nicolasvaldesgreve-potenciador``, ya que así es más fácil identificar a la persona por el nombre de Github.
 
@@ -95,9 +87,8 @@ Como no logramos solucionar el error del puerto, fuimos al LID a ver si alguien 
 
 Luego conversar por un rato, llegamos a la conclusión de que en vez de usar un Raspberry Pi Pico 2 W podíamos usar otra Arduino UNO R4 WiFi, lo cual no sabíamos que era una opción pero nos alivió mucho ya que usar la Raspberry era un poco complicado tanto en Arduino IDE como en Visual Studio Code.
 
----
 
-## Prueba LED en sistema recibir
+## Sistema Recibir - Proyecto Final
 
 Para probar si respondía el Adafruit IO al LED con el código, unimos un LED junto a una resistencia de 220 Ω a la placa Arduino mediante cables Dupont, lo cual terminó viendose así:
 
@@ -116,6 +107,12 @@ Nos tiraba error ya que el "led" no estaba declarado, por lo que corregimos eso 
 ![Arreglo en declaración de LED](./imagenes/leddeclarado.jpeg)
 
 Al correr nuevamente el código no salió ningún error pero solo salía que estaba conectando a Adafruit y aparecían muchos puntitos, por lo que nunca logró conectarse en realidad.
+
+Como no entendíamos cual era el problema, decidimos preguntar a la IA (ChatGPT) cuál podía ser el posible error, el cual nos dijo que no debíamos conectar el LED directamente a los 5V ya que esto no nos iba a permitir apagar el LED, por lo que le hicimos caso y cambiamos el cable Dupont al Pin 8 de la placa.
+
+Luego de conectar bien el LED con la placa, corrimos el código y no reaccionó el LED de la protoboard sino el LED de la placa Arduino, lo cual fue sorprendente pero no era lo que buscábamos. Cuando probamos otro código, la placa se conectó a Adafruit IO y empezó a recibir la información de encendido y apagado los cuales se representaban como "1" el cual era encendido, y con "0" el cual era apagado.
+
+![Arduino recibiendo información 0-1 de Adafruit IO](./imagenes/arduino-recibiendo-info.jpeg)
 
 ---
 

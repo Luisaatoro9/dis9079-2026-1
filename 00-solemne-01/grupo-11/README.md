@@ -27,8 +27,8 @@
 
 rellenar en el mismo orden que los integrantes del grupo
 
-[persona-01.md](./persona-01.md)
-[persona-02.md](./persona-02.md)
-[persona-03.md](./persona-03.md)
+Anays Cornejo [persona-01.md](./persona-01.md)
+
+Benjamín Álvarez [persona-02.md](./persona-02.md)
 
 ## bibliografía

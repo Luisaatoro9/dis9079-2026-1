@@ -1,45 +1,53 @@
-# grupo-xx
+# grupo-09
 
 ## integrantes
 
-* Marlén Génesis Constanza Soto Soto
+* Marlén Soto Soto
 * Marcela Zúñiga
-  
 
 ## descripción del proyecto
+El proyecto consiste en crear un sistema de comunicación entre dos dispositivos electrónicos ubicados en distintos computadores, utilizando internet como medio de conexión a través de Adafruit IO.
 
-introducción: descripción general del proyecto, qué hace, para qué sirve, etc.
+La idea principal es demostrar cómo funcionan el Internet de las Cosas (IoT): dispositivos que pueden enviar y recibir información en tiempo real sin estar conectados físicamente entre sí.
 
-desarrollo: descripción detallada del proyecto, cómo se implementó, qué tecnologías se utilizaron, etc.
+En este caso, se utiliza una sola placa Arduino, la cual cumple tanto el rol de emisor como de receptor.
 
-elemento adicional: usaron un botón, hicieron algún texto, hicieron algún led.
+Como emisor: detecta una acción o mide un valor.
+Como receptor: recibe datos desde la nube y ejecuta una acción.
 
-## bill of materials
+El funcionamiento se basa en el uso de un feed dentro de Adafruit IO:
 
-## conexiones eléctricas
+El Arduino envía datos al feed.
+Adafruit IO los almacena y gestiona en la nube.
+El mismo Arduino lee esos datos desde el feed y actúa en consecuencia.
 
-texto e imágenes
+## materiales usados en solemne-01
+•1 placa de Arduino uno R4 
 
-## diagrama de flujo
+•2 computadores 
 
-hacer con mermaid, subir código
+•Cable USB para conectar la placa
 
-## aprendizajes
+## código usado con Adafruit IO
 
-tres párrafos
+### código para enviar
 
-## dificultades
+```cpp
+// rellenar
+```
 
-tres párrafos
+### código para recibir
 
-## conclusiones
+```cpp
+// rellenar
+```
 
-tres párrafos
+## investigaciones individuales
 
-## referencias
+rellenar en el mismo orden que los integrantes del grupo
 
-lista de enlaces, libros, clases, tutoriales, etc
+[persona-01.md](./persona-01.md)
+[persona-02.md](./persona-02.md)
+[persona-03.md](./persona-03.md)
 
-* uno
-* dos
-* etc
+## bibliografía

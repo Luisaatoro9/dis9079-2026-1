@@ -1,5 +1,6 @@
-# sesion-05
+# sesion-05 6.04
 
-lunes 06 abril 2026
+Aarón actualizó las placas (la mia está en coma)
+![placa](./imagenes/placacoma.png)
 
-solemne 1
+Cami arregló los arduinos!!! genia, increible.

@@ -139,3 +139,77 @@ Serial.println("Luz apagada. ");
 }
 }
 ```
+
+### avances e investigación 4 de abril
+
+- paso a paso de la instalación de la librería de adafruit IO en el software de Arduino
+
+![instalacion](./imagenes/instalacionadafruit1.JPG)
+
+- vamos a las bibliotecas en arduino y descargamos la de adafruit
+
+![instalacion](./imagenes/instalacionadafruit2.JPG)
+
+- nos pedirá eso y aceptamos todo
+
+![cuenta](./imagenes/creandocuentadafruit1.JPG)
+
+- creamos cuenta con nuestro correo, debiera aparecer un ícono amarillo arriba a la derecha, con mis credenciales, no me aparece nada
+
+- descargar los archivos .ino y .h que dejo aarón en mi respectivo grupo 08 en github
+
+- lo hice mal al principio, me dio este error
+
+![error](./imagenes/error1config.JPG)
+
+- después me acordé que el archivo .h debía estar al lado del .ino en pestañas, es decir, tenían que estar en la misma carpeta lol. Esto lo aprendí el año pasado pero se me había olvidado, si no estaban de esta forma el arduino no iba a encontrar el .h por más que lo tuviera descargado
+
+![solucion](./imagenes/solucionError.JPG)
+
+- los puse en una misma carpeta, cerré arduino y lo abrí, ahora si me incluyó el .h
+
+- antes de esto había abierto el .h en vscode y se veía así
+
+![vscode](./imagenes/configReemplazar.JPG)
+
+- después caché que se abría en arduino e hice lo que mencioné anteriormente, reemplacé los enunciados IO USERNAME y IO KEY por VALORES SECRETOS
+
+- probé el código y compiló, no me apareció el error de conectando a Adafruit IOFirmware version 0.3.0 is outdated. Latest version is 0.5.2
+21:24:06.104 -> Please upgrade the WiFiS3 firmware, CORREGIR QUE SÍ ME APARECIÓ ESTE ERROR PERO LO SOLUCIONAMOS CON AARÓN LA MAÑANA DEL 6 DE ABRIL, adjuntar pantallazo de monitor serial
+
+- evidencia
+
+![codigo](./imagenes/codigoCompila1.JPG)
+
+- no sé si hice algo mal o no o quizá es porque el firmware de mi placa sí estaba actualizado
+
+- hasta ahí llegué de momento, quería ver el tutorial oficial de la página que mandaron pero el link aparece malo
+
+actualización 6 de abril en la mañana con aarón
+
+- en la mañana aarón me dijo que revisara bien las credenciales porque vió mi clave y efectivamente no eran las credenciales exactas, la password era la que me da la página, no la que yo le asigno a mi cuenta
+
+- por obvios motivos no colocaré mis credenciales lol
+
+- al colocar correctamente las credenciales y el nombre y la clave del wifi
+
+- también tuve que actualizar el firmware, ya que, al colocar las credenciales bien, el código funcionó entonces ahora daba el error de actualizar firmware, que era lo que precisamente tenía que suceder, actualizamos la placa y pasó esto:
+
+![fallologro](./imagenes/falloylologro.JPG)
+
+- el código se conectó y poco a poco comenzaría a enviar
+
+![enviando](./imagenes/enviandoAdafruit.JPG)
+
+- ahora sí comenzó a enviar, ahora debíamos abrir nuestra página para ver estos datos que se estaban enviando
+
+![servidorAdafruit](./imagenes/servidorAdafruit.JPG)
+
+![servidorAdafruit](./imagenes/servidorAdafruit2.JPG)
+
+- esto muestra en vivo los datos que están llegando desde arduino hacia el servidor en adafruit, lo logramos amigos
+
+
+
+
+

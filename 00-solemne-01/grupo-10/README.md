@@ -1,4 +1,4 @@
-# grupo-xx
+# grupo-10
 
 ## integrantes
 
@@ -8,38 +8,28 @@
 
 ## descripción del proyecto
 
-introducción: descripción general del proyecto, qué hace, para qué sirve, etc.
+## materiales usados en solemne-01
 
-desarrollo: descripción detallada del proyecto, cómo se implementó, qué tecnologías se utilizaron, etc.
+## código usado con Adafruit IO
 
-elemento adicional: usaron un botón, hicieron algún texto, hicieron algún led.
+### código para enviar
 
-## bill of materials
+```cpp
+// rellenar
+```
 
-## conexiones eléctricas
+### código para recibir
 
-texto e imágenes
+```cpp
+// rellenar
+```
 
-## diagrama de flujo
+## investigaciones individuales
 
-hacer con mermaid, subir código
+rellenar en el mismo orden que los integrantes del grupo
 
-## aprendizajes
+[persona-01.md](./persona-01.md)
+[persona-02.md](./persona-02.md)
+[persona-03.md](./persona-03.md)
 
-tres párrafos
-
-## dificultades
-
-tres párrafos
-
-## conclusiones
-
-tres párrafos
-
-## referencias
-
-lista de enlaces, libros, clases, tutoriales, etc
-
-* uno
-* dos
-* etc
+## bibliografía

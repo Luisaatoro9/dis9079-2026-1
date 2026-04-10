@@ -60,15 +60,15 @@ El ejemplo “Publish” hace:
 Ya sabiendo esto, descargué la librería. 
  > fui a `File` luego a `Examples` --> abrí `Adafruit IO Arduino` --> abrí el primer ejemplo `adafrutio_00_publish`
 
-<img src="./imagenes/adafruit_install.png" alt="install" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_install.png" alt="install" width="700">
 
 > instalé todas laslibrerías que me pedía (eran muchas)
 
-<img src="./imagenes/adafruit_examples.png" alt="example" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_examples.png" alt="example" width="700">
 
 > busqué que ejemplo me servía y en la página salía que el publish
 
-<img src="./imagenes/adafruit_publish.png" alt="publish" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_publish.png" alt="publish" width="700">
 
 > le pregunté a chatgpt que era lo que tenía que cambiar para que me funcionara el ejemplo.
 
@@ -101,12 +101,12 @@ por mi wifi
 
 Luego probé el ejemplo para ver si en el monitor serial salía el mensaje de **"Connecting to Adafruit IO"** , pero solo me aparecía signos de interrogación
 
-<img src="./imagenes/adafruit_fail.png" alt="fail" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_fail.png" alt="fail" width="700">
 
 - Podría haber sido por el baud, que en el código estaba a 115200 y en el monitor serial estaba a 9600
 - Lo cambié y después solo salían puntitos, no el mensaje de que ya estaba conectado
 
-<img src="./imagenes/adafruit_error.png" alt="error" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_error.png" alt="error" width="700">
 
 ## Apuntes 
 
@@ -230,12 +230,46 @@ void loop()
 }
 ```
 
+- Aqui está el `config.h` del código, donde se guarda el wifi y la clave, además de tu sesión en adafruit
+
+```cpp
+// reemplazar por las credenciales de aaron
+// o por las de tu cuenta
+// el usuario y la key son de adafruit.com 
+#define IO_USERNAME  "vxlentiinaa"
+#define IO_KEY       "blabla"
+
+
+// reemplazar por nombre y clave de la wifi
+#define WIFI_SSID "iPhone de Valentina"
+#define WIFI_PASS "blabla"
+
+// comment out the following lines if you are using fona or ethernet
+#include "AdafruitIO_WiFi.h"
+
+#if defined(USE_AIRLIFT) || defined(ADAFRUIT_METRO_M4_AIRLIFT_LITE) ||         \
+    defined(ADAFRUIT_PYPORTAL)
+// Configure the pins used for the ESP32 connection
+#if !defined(SPIWIFI_SS) // if the wifi definition isnt in the board variant
+// Don't change the names of these #define's! they match the variant ones
+#define SPIWIFI SPI
+#define SPIWIFI_SS 10 // Chip select pin
+#define NINA_ACK 9    // a.k.a BUSY or READY pin
+#define NINA_RESETN 6 // Reset pin
+#define NINA_GPIO0 -1 // Not connected
+#endif
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS, SPIWIFI_SS,
+                   NINA_ACK, NINA_RESETN, NINA_GPIO0, &SPIWIFI);
+#else
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+#endif
+```
 Luego probamos el código en clases, donde si compiló y enviaba los datos correspondientes, además se veía en la data en Adafruit :) yei
 
-<img src="./imagenes/adafruit_compiling.png" alt="compiling" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_compiling.png" alt="compiling" width="700">
 
-<img src="./imagenes/adafruit_enviando.png" alt="enviando" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_enviando.png" alt="enviando" width="700">
 
-<img src="./imagenes/adafruit_data.png" alt="data" width="700">
+<img src="./imagenes/vxlentiinaa_imagenes/adafruit_data.png" alt="data" width="700">
 
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas

@@ -24,7 +24,7 @@ Por un lado, el Arduino es capaz de almacenar datos, en este caso si el botón e
 ## código usado con Adafruit IO
 
 > En este código lo que hicimos fue incluir la pantalla OLED SS1306 con una animación/pictograma sacado de [WOKWI](https://animator.wokwi.com/)
-> Donde definimos el tamaño de la pantalla y definir una variable en el feed de Adafruit. En este caso, utilizamos un botón en los dashboards de Adafruit para prender y apagar la pantalla Oled desde otro computador; y que en esta salga la animación dependiendo de si está prendida. 
+> Donde definimos el tamaño de la pantalla y una variable en el feed de Adafruit. En este caso, utilizamos un botón en los dashboards de Adafruit para prender y apagar la pantalla Oled desde otro computador; y que en esta salga la animación dependiendo de si está prendida. 
 
 ```cpp
 // Adafruit IO Publish Example
@@ -211,6 +211,166 @@ void loop()
 
 ### código para enviar
 
+- El código que envia es el que nos mostró Aarón en clases donde modificamos este código para que este lea el valor de encendido o apagado según el botón de Adafruit y así poder prender la pantalla.
+
+```cpp
+// Adafruit IO Publish Example
+//
+// Adafruit invests time and resources providing this open source code.
+// Please support Adafruit and open source hardware by purchasing
+// products from Adafruit!
+//
+// Written by Todd Treece for Adafruit Industries
+// Copyright (c) 2016 Adafruit Industries
+// Licensed under the MIT license.
+//
+// All text above must be included in any redistribution.
+
+// ejemplo para enviar / publish
+// por montoyamoraga
+// para disenoUDP
+// basado en
+// Adafruit IO Publish Example
+
+// incluir archivo config.h
+// hacer las modificaciones de este archivo
+// NO subir a github
+#include "config.h"
+
+// librerias para pantalla oled
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// definir tamaño de la pantalla
+#define SCREEN_I2C_ADDR 0x3C
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RST_PIN -1
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST_PIN);
+
+// definir una variable que se llame nombreFeed
+// el feed es de Adafruit IO
+AdafruitIO_Feed *grupo01 = io.feed("grupo01");
+
+// estado del botón en Adafruit
+bool oledEncendida = false;
+
+// pictograma de gatito cute de wokwi
+#define FRAME_DELAY (42)
+#define FRAME_WIDTH (64)
+#define FRAME_HEIGHT (64)
+#define FRAME_COUNT (sizeof(frames) / sizeof(frames[0]))
+
+const byte PROGMEM frames[][512] = {
+  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,....
+};
+
+// función que recibe el botón on/off en Adafruit
+void handleMessage(AdafruitIO_Data *data) {
+  String valor = data->value();
+
+  Serial.print("Dato recibido: ");
+  Serial.println(valor);
+
+  if(valor == "ON") {
+    oledEncendida = true;
+  } else {
+    oledEncendida = false;
+  }
+}
+
+// contador de frames de wokwi
+int frame = 0;
+
+void setup()
+{
+  // prender la conexion serial
+  // ojo con la velocidad de 115200 baud
+  // cuando abras el monitor serial debes configurarlo
+  // a este numero, porque el standard de fabrica es 9600 baud
+  Serial.begin(115200);
+
+  // estas lineas pausan el codigo
+  // hasta que prendas el monitor serial
+  // la lupita arriba a la derecha en Arduino IDE
+  while (!Serial);
+
+  // imprimir en el monitor serial
+  Serial.print("conectando a Adafruit IO");
+
+  // aquí sirve para conectar a adafruit.io.com 
+  io.connect();
+
+  grupo01->onMessage(handleMessage);
+
+  // iniciar/prender oled
+ if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_I2C_ADDR)) {
+    Serial.println("Error OLED");
+    while(1);
+  }
+
+  display.clearDisplay();
+  display.display();
+
+  // esperar la conexion
+  while (io.status() < AIO_CONNECTED)
+  {
+    // imprimir un punto cada medio segundo
+    // mientras se conecta
+    Serial.print(".");
+    delay(500);
+  }
+
+  // demostrar que logramos conexion wujuu
+  Serial.println();
+  Serial.println(io.statusText());
+  Serial.print("Estado: ");
+  Serial.println(io.statusText());
+
+  grupo01->get();
+}
+
+unsigned long lastFrameTime = 0;
+
+void loop()
+{
+  io.run();
+
+  Serial.print("Estado OLED: ");
+  Serial.println(oledEncendida);
+
+// temporizador para ver cada cuanto cambia el frame
+// millis: es el tiempo en el que el arduino se encendio
+
+  if(oledEncendida) {
+
+    if(millis() - lastFrameTime > FRAME_DELAY) {
+      lastFrameTime = millis();
+
+      display.clearDisplay();
+      display.drawBitmap(32, 0, frames[frame], FRAME_WIDTH, FRAME_HEIGHT, 1);
+      display.display();
+
+      frame = (frame + 1) % FRAME_COUNT;
+    }
+
+  } else {
+
+    display.clearDisplay();
+    display.display();
+
+  }
+
+  delay(200);
+}
+```
+
+### código para recibir
+
+- Lo que recibe en este caso sería la pantalla Oled SS1306, en el cual se prende y apaga según el botón en el dashboard en Adafruit. La pantalla muestra un pictograma sacado de wokwi de un gatito saludando
+
 Lo primero que hicimos fue conectar la pantalla Oled SS1306 al Arduino y subir algún código para ver si funcionaba de mandera correcta.
 
 `Conexiones:`
@@ -298,17 +458,26 @@ if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_I2C_ADDR)) {
     }
 ```
 
-### código para recibir
+### Aprendizajes
 
-Lo segundo que hicimos, fue averiguar sobre Adafruit, ya que esta web iba ser la que recibe los datos y el que manda a la vez si está en on/off
+Aprendimos como grupo a ser constantes y no rendirnos hasta lograr el objetivo deseado, en este encargo la pasamos muy bien.
 
-```cpp
-// rellenar
-```
+`Aprendimos:`
+
+1. Como funciona la comunicación inalámbrica: Que los dispositivos pueden "hablar" entre sí, sin la necesidad de un cable, solo usando WIFI. Con esto pudimos entender el envío y recepción de datos como por ejemplo: feeds y dashboards
+2. Como funciona los hardware, software, plataformas de la nube, interfaz, etc.
+3. Sobre la integración de tecnologías a proyectos: como hacer que varias cosas distintas funcionen juntas, en este caso: la electrónica, la programación, la interfaz y el internet.
+4. En este proyecto, se nos permitió aprender y entender las interacciones inalámbricas como sistemas que conectan lo físico y lo digital, donde el usuario puede influir a distancia en un objeto, generando nuevas formas de comunicación, control y experiencia.
+5. Aprendimos a interconectar arduinos a una red wifi en donde podemos mandar señales y que la otra perosna la reciba, o al revés, que ellos manden una señal y nosotras recibirlas.
+6. También logramos hacer que el botón mandara el estado de encendido y apagado y se podía ver en la data de Adafruit; teníamos que mantener apretado el botón unos tres segundos y en la data aparecía `ON`
+
+|1|2|
+|---|---|
+| <img src="./imagenes/vxlentiinaa_imagenes/estado.gif" alt="estado" width="300"> | <img src="./imagenes/vxlentiinaa_imagenes/data.gif" alt="data" width="300"> |
 
 ## investigaciones individuales
 
-[persona-01.md](./persona-01.md)
+[sofiacartes.md](./persona-01.md)
 
 [persona-02.md](./persona-02.md)
 

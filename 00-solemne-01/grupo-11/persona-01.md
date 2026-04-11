@@ -52,6 +52,8 @@ Dashboard = muestra datos
 
 WiFi = conecta todo
 
+![foto](./imagenes/anaysadafruit.png)
+
 ## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
 
 #Incertitudes" by Ying Gao

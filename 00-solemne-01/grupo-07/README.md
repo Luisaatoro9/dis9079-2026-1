@@ -12,8 +12,14 @@ El Arduino se conecta a una red WiFi y luego establece comunicación con Adafrui
 Desde cualquier otro computador o celular, entras al dashboard de Adafruit IO en el navegador y presionas un botón toggle. Ese click viaja por internet hasta los servidores de Adafruit, que se lo reenvían al Arduino. El Arduino recibe el mensaje y enciende o apaga el LED.
 
 Partimos utilizando el código de ejemplo que subió Aaron a Github, para aprender como funcionaban las conexiones en base a una nube pero de primeras no funcionaba, y tras un rato investigando, dimos con que estabamos dando mal las credenciales que habia que cambiar del código, puntualmente la clave que estabamos poniendo,era la personal para ingresar al sitio, pero resulta que era la AIO Key, que es una clave alfanumérica que te da el Adafruit IO para poder conectarte a la nube.
-Luego de solucionar eso el código estaba bien, pero aún así no se conectaba, solo aparecía una serie de puntos infinitos (...........) que no nos dimos cuenta, hasta que en clases Aaron actualizó los Arduinos que tenian ese error y se solucionó, resulta que al final de los puntos habia un mensaje de "Please upgrade the WiFiS3 firmware!" pero no alcanzaba a verse.
+Luego de solucionar eso el código estaba bien, pero aún así no se conectaba, solo aparecía una serie de puntos infinitos
+
+![Puntos](./imagenes/puntos-suspensivos.png)
+
+no nos dimos cuenta, hasta que en clases Aaron actualizó los Arduinos que tenian ese error y se solucionó, resulta que al final de los puntos habia un mensaje de "Please upgrade the WiFiS3 firmware!" pero no alcanzaba a verse.
 Una vez actualizado el Arduino pudimos conectar bien con Adafruit IO y probamos con un ejercicio que nos dió Aaron, que consistía en conectarse a un feed en Adafruit IO el cual estaba conectado a una Dashboard con un contador,ese ejercicio si funcionó.
+
+![funcionó!!](./imagenes/conectado-a-adafruit.png)
 
 Durante la clase del lunes 06, quisimos intentar lograr prender un led conectado a una protoboard, pero ningún código nos funcionó.
 
@@ -34,13 +40,15 @@ Creamos un feed en Adafruit IO con el nombre de led-control y un Dashboard vincu
 ![arduino conectado al led](./imagenes/arduino-conectado-a-led.jpeg)
 
 
-## Materiales usados en solemne-01
-- 1 Arduino UNO R4 WIFI 
-- 1 protoboard 400 puntos
-- 1 pin LED 
-- 1 OHM resistor de 220
-- 1 cable Dupont M/M
-  
+
+| Componente | Cantidad | Valor Unidad | Link |
+| --- | --- | --- | --- |
+| Protoboard 400 puntos | 1 | $2.100 | <https://prodelab.cl/productos/didacticos/nivel-superior-y-ensenanza-media/robotica-y-programacion/accesorios-robotica-y-programacion/protoboard-breadboard-400-pines/?utm_source=Google%20Shopping&utm_campaign=Google%20Shopping&utm_medium=cpc&utm_term=adtribes&srsltid=AfmBOooQXrc0i240CS5O9AUC5AUSqcPz3Hrk2lJyRK-PgMDmejZeipjTcFg>
+| Pin LED | 1 | $70 |<https://afel.cl/products/diodo-led-5mm-ultrabrillante-blanco?pr_prod_strat=e5_desc&pr_rec_id=3de401054&pr_rec_pid=8382019731608&pr_ref_pid=8382019600536&pr_seq=uniform>|
+| Ohm resistor de 220 | 1 | $413 | <https://altronics.cl/pack-10-resistencias-220ohm-025watt-1porciento> |
+| Cables Dupont | 1 | $65 | <https://mcielectronics.cl/shop/product/cable-dupont-macho-macho-20cm-pack-40-unidades/?srsltid=AfmBOooI8-36HQsjC83sDGqLy-uZ_ht-tuw0nwyKZnloJfamdRdmCWYI> |
+| Arduino UNO R4 WiFi | 1 | $38.990 | <https://arduino.cl/producto/arduino-uno-r4-wifi/?srsltid=AfmBOopJcCsivMRX00i4ZKVCJATlhSM2Bc6SCRhEdXzw6r1x08Ui9740> |
+
 ## código usado con Adafruit IO
 
 ### código para enviar
@@ -139,11 +147,8 @@ void MQTT_connect() {
 }
 ```
 
-### código para recibir
+![codigo funcionando](./imagenes/codigo-funcionando.gif)
 
-```cpp
-// rellenar
-```
 
 ## investigaciones individuales
 
@@ -154,3 +159,10 @@ rellenar en el mismo orden que los integrantes del grupo
 [persona-03.md](./persona-03.md)
 
 ## Bibliografía
+
+Adafruit IO https://learn.adafruit.com/adafruit-io/arduino
+Adafruit IO overview https://io.adafruit.com/vxlentiinaa/overview
+Arduino libraries Adafruit IO https://docs.arduino.cc/libraries/adafruit-io-arduino/
+Github Adafruit IO https://github.com/adafruit/Adafruit_IO_Arduino
+Adafruit IO basics color https://learn.adafruit.com/adafruit-io-basics-color
+Arduino cheat sheet http://docs.arduino.cc/tutorials/uno-r4-wifi/cheat-sheet/?utm_source=chatgpt.com

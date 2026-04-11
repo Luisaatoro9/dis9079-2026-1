@@ -1,4 +1,4 @@
-## 3 Josefa Araya
+## 1 Josefa Araya
 
 investigaciones individuales
 
@@ -51,15 +51,9 @@ Sus inspiraciones al construir sus prendas están en la transformación social, 
 
 >“Cuando es muy conceptual, pierdo el interes. Estoy atraida al objeto, el material usado, y como puedo usarlo.” - Ying Gao
 
-Seleccioné los tres trabajos que más me llamaron la atención:
+Seleccioné los dos trabajos que más me llamaron la atención:
 
-1. Incertitudes
-
-2013
-
-![Incertitudes, 2013](./imagenes/ying-gao-soundactivated.gif)
-
-2. Possible tomorrows
+1. Possible tomorrows
 
 2017
 
@@ -79,7 +73,7 @@ Cuando están inmóviles, los paneles de hilo forman curvas aplanadas que preten
 
 ![Espirografo](./imagenes/spirograph.gif)
 
-3. Flowing water, Standing time
+2. Flowing water, Standing time
 
 
 Ropa robótica que reacciona al espectro cromático

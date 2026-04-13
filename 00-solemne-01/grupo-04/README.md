@@ -2,9 +2,9 @@
 
 ## integrantes
 
-* martina alegria
 * antonella lavalle
 * catalina salinas/https://github.com/catasal/dis9079-2026-1
+* martina alegria
 
 ## descripción del proyecto
 

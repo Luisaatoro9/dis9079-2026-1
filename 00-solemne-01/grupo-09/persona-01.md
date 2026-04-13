@@ -134,6 +134,9 @@ El trabajo de Mariko Mori demuestra que la tecnología puede ir más allá de su
 
 ## Bibliografia
 Adafruit Industries. (s.f.). Adafruit IO Arduino. Adafruit Learning System. https://learn.adafruit.com/adafruit-io/arduino
+
 Adafruit Industries. (s.f.). Adafruit IO Arduino library. GitHub. https://github.com/adafruit/Adafruit_IO_Arduino
+
 Adafruit Industries. (s.f.). Adafruit IO basics: Feeds. Adafruit Learning System. https://learn.adafruit.com/adafruit-io-basics-feeds
+
 Arduino. (s.f.). Arduino reference. https://www.arduino.cc/reference/en/

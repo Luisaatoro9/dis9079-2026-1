@@ -78,18 +78,12 @@ Software utilizado:
 - Buscar: Adafruit IO Arduino.
 - Instalar versión 4.3.4 (abril 2026) o superior.
 
-- Abrir Arduino IDE.
-- Dirigirse al menú lateral izquierdo, icono de Library Manager (ícono lateral izquierdo).
-- Buscar: Adafruit IO Arduino.
-- Instalar versión 4.3.4 (abril 2026) o superior.
-
-
 <img width="445" height="386" alt="Libreria arduino" src="https://github.com/user-attachments/assets/d41cf0e5-0742-459a-81c9-512495ffe6f0" />
 
 
 ## Aprendizajes
 
-- Las librerías no funcionan solas: necesitan dependencias.
+- Las bibliotecas no funcionan solas: necesitan dependencias.
 
 - Arduino automatiza la instalación, pero hay que aceptar manualmente.
 
@@ -126,15 +120,13 @@ NO compartir públicamente.
 Compartir solo por medios privados.
 
 ```cpp
-# define IO_USERNAME "usuario"
-
-# define IO_KEY "clave"
+#define IO_USERNAME "tu_usuario"
+#define IO_KEY "tu_clave"
 ```
 
 ```cpp
-# define WIFI_SSID "wifi"
-
-# define WIFI_PASS "password"
+#define WIFI_SSID "nombre_de_tu_red"
+#define WIFI_PASS "password_de_tu_red"
 ```
 
 Este archivo NO debe subirse completo a GitHub.
@@ -267,6 +259,7 @@ Adafruit IO para ver gráficos en tiempo real con los datos enviados.
 
 <img width="1470" height="956" alt="prueba 3 grupo01" src="https://github.com/user-attachments/assets/bfdf2bf6-948d-4b50-9b00-93c9e9332339" />
 
+
 ## Reflexión del proceso
 
 
@@ -278,7 +271,7 @@ Aprendizajes técnicos:
 
 - Uso de plataformas IoT.
 
-- Comunicación entre dispositivos remotos
+- Comunicación entre dispositivos remotos.
 
 *Aprendizajes prácticos:
 

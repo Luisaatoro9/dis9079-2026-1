@@ -29,7 +29,13 @@ Vuleve a `true` si todo funciona bien, vuelve a `false` si hubo un problema.
 - `int getThreshold()`: Obtiene el umbral actual.
 - D0 -> digital 0
 
- #### Código visto enclases
+### Código visto enclases
+
+Antes de ver el código revisamos los pinouts del Arduin r4 minima wifi
+
+<img src="./imagenes/arduinoPinout.jpg" alt="install" width="300">
+
+imágen sacada de: <https://www.geekfactory.mx/producto/arduino-uno-r4/?srsltid=AfmBOoqRndkhqJ8yTG48xPUQ-dplEwDLJpbTxowiNFoIRZPJXGhD-76m>
 
 Tutorial de UNO R4 Capacitive-Touch, comentado en clases por Aarón.
  
@@ -125,5 +131,8 @@ void loop() {
   delay(100);
 }
 ```
+#### Documentación
+
+<img src="./imagenes/proceso.gif" alt="install" width="300">
 
 Información sacada de: <https://docs.arduino.cc/tutorials/uno-r4-wifi/touch/>

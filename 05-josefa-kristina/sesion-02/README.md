@@ -34,29 +34,29 @@ delay(1000): espera 1 segundo
 
 # Imprimir siglas del curso en la pantalla
 
-#include incluir x p.e bibliotecas
+`#include` incluir x p.e bibliotecas
 
-ArduinoLEDMatrix pantalla o cualquier palabra;
+`ArduinoLEDMatrix` pantalla o cualquier palabra;
 
-pantalla.begin();  inicializar pantalla
+`pantalla.begin()`;  inicializar pantalla
 
-pantalla.beginDraw: definir dibujo
+`pantalla.beginDraw`: definir dibujo
 
-pantalla.stroke(0xFFFFFFFF): Definir trazo
+`pantalla.stroke(0xFFFFFFFF)`: Definir trazo
 
-pantalla.textScrollSpeed(100); Definir velocidad deslizamiento
+`pantalla.textScrollSpeed(100)`; Definir velocidad deslizamiento
 
-const char texto[] = "    diseno udp dis9704 interacciones inalambricas    ";  Definir texto
+`const char texto[]` = "    diseno udp dis9704 interacciones inalambricas    ";  Definir texto
 
-pantalla.textFont(Font_5x7); Definir tipo
+`pantalla.textFont(Font_5x7)`; Definir tipo
 
-pantalla.beginText(0, 1, 0xFFFFFF); Definir el inicio del texto
+`pantalla.beginText(0, 1, 0xFFFFFF)`; Definir el inicio del texto
 
-pantalla.println(texto); Imprimir el texto
+`pantalla.println(texto)`; Imprimir el texto
 
-pantalla.endText(SCROLL_LEFT); Deslizar hacia la izq
+`pantalla.endText(SCROLL_LEFT)`; Deslizar hacia la izq
 
-pantalla.endDraw(); Fin del dibujo
+`pantalla.endDraw()`; Fin del dibujo
 }
 
 
@@ -64,10 +64,6 @@ pantalla.endDraw(); Fin del dibujo
 
 MQTT broker
 
-
-
-
- 
 
 
 

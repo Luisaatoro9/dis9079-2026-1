@@ -14,7 +14,16 @@ Una vez resuelta esa parte, se estableció una comunicación inalámbrica con la
 
 En general el proyecto permite entender de forma práctica cómo funciona el internet de las cosas, ya que se trabaja con un sistema donde un dispositivo físico se conecta a internet para intercambiar datos en tiempo real con una plataforma digital.
 
-## Materiales usados en solemne-01
+## Materiales/Software usados en solemne-01
+
+| Cantidad | Componente / Recurso | Función en esta Etapa |
+| --- | --- | --- |
+| 1 | Arduino UNO R4 WiFi | Placa principal permite leer datos y conectarse a internet por WiFi. |
+| 1 | Cable USB-C | Conexión principal que permite cargar el codigo y transmitirlo a la placa. |
+| 1 | Arduino IDE | Software para programar codigos a la placa. |
+| 1 | Librería Adafruit IO | Simplifica la comunicación entre la placa Arduino y la nube. |
+| 1 | Cuenta de Adafruit IO | Plataforma de registro y visualización de datos. |
+| 1 | Red WiFi / Hotspot móvil | Permite la conexión a internet para el funcionamiento del sistema. |
 
 ## Código usado con Adafruit IO
 
@@ -64,11 +73,6 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 #endif
 ```
 
-### código para recibir
-
-```cpp
-// rellenar
-```
 
 ## investigaciones individuales
 

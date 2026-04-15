@@ -35,7 +35,7 @@ el dashboard mira esa cajita y muestra lo que hay dentro.
 - **archivo config.h** → guarda claves, usuario y red
 - **THROTTLE WARNING** → cuenta que alcanzó el límite de velocidad de envío de datos en Adafruit IO
 
-algunos apuntes  
+## algunos apuntes  
 
 pulsometro **Threshold** → qué valor de señal voy a considerar que esto ya cuenta como latido // subir si sigue detectando sin dedo el bpm  
 **void setup()** → Sirve para preparar todo antes de que empiece el programa principal.

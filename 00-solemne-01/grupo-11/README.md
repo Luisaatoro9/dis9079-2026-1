@@ -26,11 +26,11 @@ En un inicio consideramos otras ideas, pero no las desarrollamos porque aún no 
 
 Utilizamos un Arduino UNO R4 WiFi conectado a una protoboard con la siguiente configuración:
 
-- GND al negativo de la protoboard
+* GND al negativo de la protoboard
 
-- 3.3V al positivo de la protoboard
+* 3.3V al positivo de la protoboard
 
-- Un LED externo conectado entre positivo y negativo
+* Un LED externo conectado entre positivo y negativo
 
 ![circuito](./imagenes/ilustracion.jpg)
 
@@ -138,7 +138,7 @@ Durante el desarrollo surgió un problema, el sistema recibía los datos correct
 
 Para resolverlo, decidimos reemplazar el LED externo por el LED integrado (LED_BUILTIN). Este cambio permitió que el sistema funcionara correctamente.
 
-#### Funcionamiento correcto utilizando el LED integrado del Arduino.
+#### Funcionamiento correcto utilizando el LED integrado del Arduino
 
 [![intento definitivo](https://img.youtube.com/vi/q9Ajooq1Ip0/0.jpg)](https://www.youtube.com/watch?v=q9Ajooq1Ip0)
 
@@ -148,9 +148,9 @@ El Arduino lo conectamos al computador, mientras que las instrucciones las envi�
 
 Trabajamos con dos comandos principales:
 
-- ON, para encender el LED
+* ON, para encender el LED
 
-- OFF, para apagar el LED
+* OFF, para apagar el LED
 
 Los valores enviados desde el dashboard se registraban en un feed, el cual permitía visualizar el estado del sistema en tiempo real.
 
